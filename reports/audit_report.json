@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-11-17T08:01:01.003499+00:00",
+  "total_checks": 20,
+  "passed": 20,
+  "failed": 0,
+  "compliance_percent": 100.0,
+  "results": [
+    {
+      "id": "CIS-01",
+      "criterion": "Có enable secret",
+      "status": "PASS",
+      "reason": "Bảo vệ chế độ đặc quyền."
+    },
+    {
+      "id": "CIS-02",
+      "criterion": "Không dùng enable password dạng thường",
+      "status": "PASS",
+      "reason": "Tránh dùng mật khẩu enable dạng yếu."
+    },
+    {
+      "id": "CIS-03",
+      "criterion": "Bật mã hóa mật khẩu trong cấu hình",
+      "status": "PASS",
+      "reason": "Mã hóa các password dạng plaintext trong cấu hình; Type 7 không phải mã hóa mạnh."
+    },
+    {
+      "id": "CIS-04",
+      "criterion": "Bật SSH",
+      "status": "PASS",
+      "reason": "Ưu tiên SSH phiên bản 2."
+    },
+    {
+      "id": "CIS-05",
+      "criterion": "Có domain name",
+      "status": "PASS",
+      "reason": "Điều kiện hỗ trợ tạo khóa RSA cho SSH."
+    },
+    {
+      "id": "CIS-06",
+      "criterion": "Có khóa RSA",
+      "status": "PASS",
+      "reason": "Cần kiểm tra khóa RSA thực tế trên thiết bị."
+    },
+    {
+      "id": "CIS-07",
+      "criterion": "Có username local dùng secret",
+      "status": "PASS",
+      "reason": "Dùng secret thay cho password dạng thường."
+    },
+    {
+      "id": "CIS-08",
+      "criterion": "VTY dùng SSH",
+      "status": "PASS",
+      "reason": "Không cho phép Telnet trên VTY."
+    },
+    {
+      "id": "CIS-09",
+      "criterion": "VTY có login local hoặc AAA",
+      "status": "PASS",
+      "reason": "Yêu cầu xác thực khi truy cập từ xa."
+    },
+    {
+      "id": "CIS-10",
+      "criterion": "Có ACL quản lý",
+      "status": "PASS",
+      "reason": "Tạo ACL để giới hạn truy cập."
+    },
+    {
+      "id": "CIS-11",
+      "criterion": "Có AAA new-model",
+      "status": "PASS",
+      "reason": "Bật khung AAA."
+    },
+    {
+      "id": "CIS-12",
+      "criterion": "Có cấu hình Syslog",
+      "status": "PASS",
+      "reason": "Gửi log đến máy chủ tập trung."
+    },
+    {
+      "id": "CIS-13",
+      "criterion": "Có cấu hình NTP",
+      "status": "PASS",
+      "reason": "Đồng bộ thời gian."
+    },
+    {
+      "id": "CIS-14",
+      "criterion": "Có banner cảnh báo",
+      "status": "PASS",
+      "reason": "Hiển thị cảnh báo khi truy cập."
+    },
+    {
+      "id": "CIS-15",
+      "criterion": "Tắt HTTP server",
+      "status": "PASS",
+      "reason": "Tắt dịch vụ HTTP quản trị không mã hóa."
+    },
+    {
+      "id": "CIS-16",
+      "criterion": "Tắt HTTPS server nếu không sử dụng",
+      "status": "PASS",
+      "reason": "Tắt giao diện HTTPS nếu không có nhu cầu."
+    },
+    {
+      "id": "CIS-17",
+      "criterion": "Có timeout cho VTY",
+      "status": "PASS",
+      "reason": "Tự động ngắt phiên nhàn rỗi."
+    },
+    {
+      "id": "CIS-18",
+      "criterion": "Có giới hạn số lần đăng nhập",
+      "status": "PASS",
+      "reason": "Giảm nguy cơ dò mật khẩu."
+    },
+    {
+      "id": "CIS-19",
+      "criterion": "Có cấu hình ACL áp dụng trên interface",
+      "status": "PASS",
+      "reason": "Lọc lưu lượng vào/ra interface."
+    },
+    {
+      "id": "CIS-20",
+      "criterion": "Có cấu hình logging buffered",
+      "status": "PASS",
+      "reason": "Lưu log cục bộ để hỗ trợ kiểm tra."
+    }
+  ]
+}

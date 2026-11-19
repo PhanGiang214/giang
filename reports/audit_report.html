@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<title>Báo cáo CIS Audit</title>
+<style>
+body{font-family:Arial,sans-serif;margin:32px;color:#222}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #ccc;padding:9px;text-align:left}
+th{background:#eee} .pass{color:green;font-weight:bold}
+.fail{color:#c00;font-weight:bold}
+.summary{padding:14px;background:#f3f6fa;margin:16px 0}
+</style></head><body>
+<h1>Báo cáo kiểm toán cấu hình Cisco IOS</h1>
+<div class="summary">
+<p>Tổng tiêu chí: 20</p>
+<p>Đạt: 20 | Chưa đạt: 0</p>
+<h2>Tỷ lệ tuân thủ: 100.0%</h2>
+<p>Thời gian: 2026-11-17T08:01:01.003499+00:00</p>
+</div>
+<table><thead><tr><th>Mã</th><th>Tiêu chí</th><th>Kết quả</th><th>Ý nghĩa</th></tr></thead>
+<tbody><tr><td>CIS-01</td><td>Có enable secret</td><td class='pass'>PASS</td><td>Bảo vệ chế độ đặc quyền.</td></tr><tr><td>CIS-02</td><td>Không dùng enable password dạng thường</td><td class='pass'>PASS</td><td>Tránh dùng mật khẩu enable dạng yếu.</td></tr><tr><td>CIS-03</td><td>Bật mã hóa mật khẩu trong cấu hình</td><td class='pass'>PASS</td><td>Mã hóa các password dạng plaintext trong cấu hình; Type 7 không phải mã hóa mạnh.</td></tr><tr><td>CIS-04</td><td>Bật SSH</td><td class='pass'>PASS</td><td>Ưu tiên SSH phiên bản 2.</td></tr><tr><td>CIS-05</td><td>Có domain name</td><td class='pass'>PASS</td><td>Điều kiện hỗ trợ tạo khóa RSA cho SSH.</td></tr><tr><td>CIS-06</td><td>Có khóa RSA</td><td class='pass'>PASS</td><td>Cần kiểm tra khóa RSA thực tế trên thiết bị.</td></tr><tr><td>CIS-07</td><td>Có username local dùng secret</td><td class='pass'>PASS</td><td>Dùng secret thay cho password dạng thường.</td></tr><tr><td>CIS-08</td><td>VTY dùng SSH</td><td class='pass'>PASS</td><td>Không cho phép Telnet trên VTY.</td></tr><tr><td>CIS-09</td><td>VTY có login local hoặc AAA</td><td class='pass'>PASS</td><td>Yêu cầu xác thực khi truy cập từ xa.</td></tr><tr><td>CIS-10</td><td>Có ACL quản lý</td><td class='pass'>PASS</td><td>Tạo ACL để giới hạn truy cập.</td></tr><tr><td>CIS-11</td><td>Có AAA new-model</td><td class='pass'>PASS</td><td>Bật khung AAA.</td></tr><tr><td>CIS-12</td><td>Có cấu hình Syslog</td><td class='pass'>PASS</td><td>Gửi log đến máy chủ tập trung.</td></tr><tr><td>CIS-13</td><td>Có cấu hình NTP</td><td class='pass'>PASS</td><td>Đồng bộ thời gian.</td></tr><tr><td>CIS-14</td><td>Có banner cảnh báo</td><td class='pass'>PASS</td><td>Hiển thị cảnh báo khi truy cập.</td></tr><tr><td>CIS-15</td><td>Tắt HTTP server</td><td class='pass'>PASS</td><td>Tắt dịch vụ HTTP quản trị không mã hóa.</td></tr><tr><td>CIS-16</td><td>Tắt HTTPS server nếu không sử dụng</td><td class='pass'>PASS</td><td>Tắt giao diện HTTPS nếu không có nhu cầu.</td></tr><tr><td>CIS-17</td><td>Có timeout cho VTY</td><td class='pass'>PASS</td><td>Tự động ngắt phiên nhàn rỗi.</td></tr><tr><td>CIS-18</td><td>Có giới hạn số lần đăng nhập</td><td class='pass'>PASS</td><td>Giảm nguy cơ dò mật khẩu.</td></tr><tr><td>CIS-19</td><td>Có cấu hình ACL áp dụng trên interface</td><td class='pass'>PASS</td><td>Lọc lưu lượng vào/ra interface.</td></tr><tr><td>CIS-20</td><td>Có cấu hình logging buffered</td><td class='pass'>PASS</td><td>Lưu log cục bộ để hỗ trợ kiểm tra.</td></tr></tbody></table>
+<p><i>Lưu ý: Đây là checklist thực hành định hướng CIS, không phải chứng nhận CIS chính thức.
+Cần hiệu chỉnh theo model và phiên bản Cisco IOS cụ thể.</i></p>
+</body></html>
