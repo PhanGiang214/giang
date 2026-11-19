@@ -1,0 +1,38 @@
+name: DevSecOps Network Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: CIS Audit
+        run: python audit.py
+
+      - name: Install Trivy
+        uses: aquasecurity/setup-trivy@v0.3.1
+
+      - name: Secret Scan
+        run: trivy fs --scanners secret .
+
+      - name: Build Docker Image
+        run: docker build -t devsecops-network .
+
+      - name: Image Scan
+        run: trivy image --exit-code 1 --severity CRITICAL devsecops-network
